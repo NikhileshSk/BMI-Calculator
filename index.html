@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <div class="cards">
+            <div class="card">
+                <h2>Input Your Details</h2>
+                <div class="gender-selection">
+                    <label>
+                        <input type="radio" name="gender" value="male" checked>
+                        <span>Male</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        <span>Female</span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="height">Height (cm)</label>
+                    <input type="number" id="height" placeholder="Enter your height">
+                </div>
+                <div class="input-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="Enter your weight">
+                </div>
+                <button id="calculate-btn">Calculate BMI</button>
+            </div>
+
+            <div class="card">
+                <h2>BMI Result</h2>
+                <p>Your BMI is: <span id="bmi-result">0</span></p>
+                <p>Status: <span id="bmi-status">Unknown</span></p>
+            </div>
+
+            <div class="card">
+                <h2>BMI Chart</h2>
+                <canvas id="bmiChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
